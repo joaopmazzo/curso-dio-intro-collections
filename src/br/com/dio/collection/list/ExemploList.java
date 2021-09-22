@@ -42,8 +42,8 @@ class ExemploList {
 
         System.out.println("Confira se a nota 5.0 está na lista: " + notas.contains(5d));
 
-        /*System.out.println("Exiba todas as notas na ordem em que foram informados: ");
-        for (Double nota : notas) System.out.println(nota);*/
+        System.out.println("Exiba todas as notas na ordem em que foram informados: ");
+        for (Double nota : notas) System.out.println(nota);
 
         System.out.println("Exiba a terceira nota adicionada: " + notas.get(2));
         System.out.println(notas.toString());
@@ -78,10 +78,10 @@ class ExemploList {
         }
         System.out.println(notas);
 
-        /*System.out.println("Apague toda a lista");
+        System.out.println("Apague toda a lista");
         notas.clear();
         System.out.println(notas);
-        */
+
         System.out.println("Confira se a lista está vazia: " + notas.isEmpty());
 
 /*
@@ -94,6 +94,23 @@ Para você: Resolva esses exercícios utilizando os métodos da implementação 
 
         System.out.println("Mostre a primeira nota da nova lista removendo-o: ");
 */
+        System.out.println("Nova lista usando LinkedList");
+
+        LinkedList<Double> notas2 = new LinkedList<Double>();
+        notas2.add(7.0);
+        notas2.add(8.5);
+        notas2.add(9.3);
+        notas2.add(5d);
+        notas2.add(7d);
+        notas2.add(0d);
+        notas2.add(3.6);
+
+        System.out.println(notas2);
+
+        System.out.println("Primeira nota da nova lista sem removê-la:: "+notas2.getFirst());
+
+        notas2.removeFirst();
+        System.out.println("Nova primeira nota da lista:: "+notas2.getFirst());
 
     }
 }

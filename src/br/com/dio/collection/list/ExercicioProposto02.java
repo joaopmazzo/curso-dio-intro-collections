@@ -21,7 +21,7 @@ public class ExercicioProposto02 {
         Scanner scanner = new Scanner(System.in);
 
         System.out.println("Perguntas: ");
-        System.out.print("\nTelefonou para vítima? ");
+        System.out.print("Telefonou para vítima? ");
         String resposta = scanner.next();
         respostas.add(resposta.toLowerCase());
         System.out.print("Esteve no local do crime? ");

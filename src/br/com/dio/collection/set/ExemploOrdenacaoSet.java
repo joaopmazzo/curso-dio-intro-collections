@@ -43,12 +43,21 @@ public class ExemploOrdenacaoSet {
         for (Serie serie: minhasSeries3) System.out.println(serie.getNome() + " - "
                 + serie.getGenero() + " - " + serie.getTempoEpisodio());
 
-//Pra você
-/*        System.out.println("--\tOrdem gênero\t--");
+        //Pra você
+        System.out.println("--\tOrdem gênero\t--");
+        Set<Serie> minhasSeries4 = new TreeSet<>(new CompartorGenero());
+        minhasSeries4.addAll(minhasSeries);
+        for (Serie serie : minhasSeries4) System.out.println(serie.getNome() + " - "
+            + serie.getGenero() + " - "
+            + serie.getTempoEpisodio());
 
-          System.out.println("--\tOrdem Tempo Episódio\t--");
- */
 
+        System.out.println("--\tOrdem Tempo Episódio\t--");
+        Set<Serie> minhasSeries5 = new TreeSet<>(new ComparatorTempoEpisodio());
+        minhasSeries5.addAll(minhasSeries);
+        for (Serie serie : minhasSeries5) System.out.println(serie.getNome() + " - "
+            + serie.getGenero() + " - "
+            + serie.getTempoEpisodio());
     }
 }
 
@@ -106,7 +115,7 @@ class Serie implements Comparable<Serie>{
     }
 }
 
-class ComparatorNomeGeneroTempoEpisodio implements Comparator<Serie>{
+class ComparatorNomeGeneroTempoEpisodio implements Comparator<Serie> {
 
     @Override
     public int compare(Serie s1, Serie s2) {
@@ -117,5 +126,24 @@ class ComparatorNomeGeneroTempoEpisodio implements Comparator<Serie>{
         if (genero != 0) return genero;
 
         return Integer.compare(s1.getTempoEpisodio(), s2.getTempoEpisodio());
+    }
+}
+
+class CompartorGenero implements Comparator<Serie> {
+
+    @Override
+    public int compare(Serie s1, Serie s2) {
+        return s1.getGenero().compareToIgnoreCase(s2.getGenero());
+    }
+}
+
+class  ComparatorTempoEpisodio implements Comparator<Serie> {
+
+    @Override
+    public int compare(Serie s1, Serie s2) {
+        int tempo = s1.getTempoEpisodio().compareTo(s2.getTempoEpisodio());
+        if (tempo != 0) return tempo;
+
+        return s1.getNome().compareToIgnoreCase(s2.getNome());
     }
 }

@@ -21,8 +21,10 @@ public class ExemploSet {
         System.out.println(notas.toString());
 
 //        System.out.println("Exiba a posição da nota 5.0: ");
+        // não é possivel fazer buscas de posição quando estamos trabalhando com o set;
 
 //        System.out.println("Adicione na lista a nota 8.0 na posição 4: ");
+        // não é possivel trabalhar com composição quando estamos trabalhando com o set;
 
 //        System.out.println("Substitua a nota 5.0 pela nota 6.0: ");
 
