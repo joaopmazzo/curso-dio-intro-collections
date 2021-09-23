@@ -47,7 +47,6 @@ public class ExemploMap {
         System.out.println(consumos);
 
         System.out.println("Exiba o modelo mais econômico e seu consumo: ");
-
         Double consumoMaisEficiente = Collections.max(carrosPopulares.values());
         Set<Map.Entry<String, Double>> entries = carrosPopulares.entrySet();
         String modeloMaisEficiente = "";
