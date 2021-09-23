@@ -47,20 +47,24 @@ public class RefatoracaoOrdenacaoMap {
 
         System.out.println("--\tOrdem número telefone\t--");
         //precisamos organizar os valores. Logo:
-        /*Set<Map.Entry<Integer, Contato>> set = new TreeSet<>(new Comparator<Map.Entry<Integer, Contato>>() {
+        /*
+        Set<Map.Entry<Integer, Contato>> set = new TreeSet<>(new Comparator<Map.Entry<Integer, Contato>>() {
             @Override
             public int compare(Map.Entry<Integer, Contato> cont1, Map.Entry<Integer, Contato> cont2) {
                 return Integer.compare(cont1.getValue().getNumero(), cont2.getValue().getNumero());
             }
-        });*/
+        });
+        */
 
-        /*Set<Map.Entry<Integer, Contato>> set = new TreeSet<>(Comparator.comparing(
+        /*
+        Set<Map.Entry<Integer, Contato>> set = new TreeSet<>(Comparator.comparing(
                 new Function<Map.Entry<Integer, Contato>, Integer>() {
                     @Override
                     public Integer apply(Map.Entry<Integer, Contato> cont) {
                         return cont.getValue().getNumero();
                     }
-                }));*/
+                }));
+         */
 
         Set<Map.Entry<Integer, Contato>> set = new TreeSet<>(Comparator.comparing(
                 cont -> cont.getValue().getNumero()));

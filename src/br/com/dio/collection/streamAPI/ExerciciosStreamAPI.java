@@ -15,6 +15,7 @@ public class ExerciciosStreamAPI {
 //        System.out.println("Imprima todos os elementos dessa lista de String: ");
 //        numerosAleatorios.stream()
 //                 .forEach(System.out::println);
+
 //        numerosAleatorios.forEach(System.out::println);
 
 //        System.out.println("Pegue os 5 primeiros números e coloque dentro de um Set:");
@@ -85,7 +86,7 @@ public class ExerciciosStreamAPI {
         numerosAleatoriosInteger.stream()
                 .mapToInt(Integer::intValue)
                 .max()
-                .ifPresent(System.out::println);;
+                .ifPresent(System.out::println);
 
         int somaDosNumerosPares = numerosAleatoriosInteger.stream()
                 .filter(i -> (i % 2 == 0))
